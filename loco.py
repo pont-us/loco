@@ -1,5 +1,17 @@
 #!/usr/bin/env python3
 
+"""Locate files by regex, let user select one, and open it
+
+Usage: loco.py REGEX [COMMAND]
+
+1. Use "locate -i -r" to find all files matching REGEX
+2. Display a numbered list of matches.
+3. Take a number as user input.
+4. Run COMMAND on the selected file; if COMMAND not given, run xdg-open.
+
+By Pontus Lurcock, 2024. Released into the public domain.
+"""
+
 from typing import Optional, Tuple
 import re
 import pathlib
